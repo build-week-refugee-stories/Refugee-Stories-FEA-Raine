@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import StoryList from './components/StoryList';
 import Navigation from './components/Navigation';
+import Home from './components/Home';
 import './App.css';
 
 class App extends Component {
@@ -36,6 +37,10 @@ class App extends Component {
         />
         <Route 
           exact path="/" 
+          component={Home}
+        />
+        <Route 
+          exact path="/stories" 
           render={props => (
             <StoryList {...props} stories={this.state.stories} />
           )}
