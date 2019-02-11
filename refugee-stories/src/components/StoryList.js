@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 import Story from './Story';
-
 
 class StoryList extends Component {
   constructor(props) {
@@ -20,16 +20,19 @@ class StoryList extends Component {
         <ul>
           {this.props.stories.map(story => {
             return (
-              <Story 
-                story={story} 
-                key={story.id}
-                title={story.title}
-                author={story.author}
-                snippet={story.snippet}
-              />
+              <Link to={`/stories/${story.id}`} key={story.id}>
+                <Story
+                  story={story}
+                  key={story.id}
+                  title={story.title}
+                  author={story.author}
+                  snippet={story.snippet}
+                />
+              </Link>
             );
           })}
         </ul>
+        
       </div>
     )
   }

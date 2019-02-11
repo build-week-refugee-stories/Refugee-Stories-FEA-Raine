@@ -7,13 +7,15 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import StoryList from './components/StoryList';
 import SubmitStory from './components/SubmitStory';
+import IndStory from './components/IndStory';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stories: []
+      stories: [],
+      title: ''
     }
   }
 
@@ -50,6 +52,16 @@ class App extends Component {
         <Route 
           exact path="/submit_story" 
           component={SubmitStory}
+        />
+        <Route 
+          path="/stories/:storyId"
+          render={props => (
+            <IndStory 
+              {...props} 
+              stories={this.state.stories} 
+              title={this.title}
+            />
+          )}
         />
       </div>
     );
