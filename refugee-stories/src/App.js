@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
+
 import StoryList from './components/StoryList';
+import Navigation from './components/Navigation';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -27,8 +30,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Build Week!</h1>
-        <StoryList stories={this.state.stories} />
+        <Route 
+          path="/" 
+          component={Navigation}
+        />
+        <Route 
+          exact path="/" 
+          render={props => (
+            <StoryList {...props} stories={this.state.stories} />
+          )}
+        />
+        
       </div>
     );
   }
