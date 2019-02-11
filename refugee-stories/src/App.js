@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import StoryList from './components/StoryList';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Welcome to Build Week!</h1>
+        <StoryList stories={this.state.stories} />
       </div>
     );
   }
