@@ -10,7 +10,7 @@ const Navigation = () => {
       <NavLink to="/stories">
         <h2>Stories</h2>
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/submit_story">
         <h2>Submit Your Story</h2>
       </NavLink>
       <NavLink to="/">

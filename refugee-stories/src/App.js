@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
 
-import StoryList from './components/StoryList';
+
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import StoryList from './components/StoryList';
+import SubmitStory from './components/SubmitStory';
 import './App.css';
 
 class App extends Component {
@@ -45,7 +47,10 @@ class App extends Component {
             <StoryList {...props} stories={this.state.stories} />
           )}
         />
-        
+        <Route 
+          exact path="/submit_story" 
+          component={SubmitStory}
+        />
       </div>
     );
   }
