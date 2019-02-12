@@ -11,12 +11,8 @@ import IndStory from './components/IndStory';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      stories: [],
-      title: ''
-    }
+  state = {
+    stories: [],
   }
 
   componentDidMount = () => {
@@ -54,14 +50,8 @@ class App extends Component {
           component={SubmitStory}
         />
         <Route 
-          path="/stories/:storyId"
-          render={props => (
-            <IndStory 
-              {...props} 
-              stories={this.state.stories} 
-              title={this.title}
-            />
-          )}
+          path="/stories/:id"
+          component={IndStory}
         />
       </div>
     );
