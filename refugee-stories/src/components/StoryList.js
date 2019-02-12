@@ -11,7 +11,7 @@ class StoryList extends Component {
       title: '',
       author: '',
       snippet: ''
-    }
+    } 
   }
 
   render() {

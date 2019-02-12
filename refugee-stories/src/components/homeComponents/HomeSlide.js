@@ -1,14 +1,17 @@
 import React from 'react';
 
-const HomeSlide = ({ image }) => {
+const HomeSlide = props => {
   const styles = {
-    backgroundImage: `url(${image})`,
+    backgroundImage: `url(${props.url_thumbnail})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%'
   }
   return (
-    <div className='slide' style={styles}></div>
+    <div className='slide' style={styles}>
+      <h3>{props.title}</h3>
+      <p>{props.snippet}</p>
+    </div>
   )
 }
 

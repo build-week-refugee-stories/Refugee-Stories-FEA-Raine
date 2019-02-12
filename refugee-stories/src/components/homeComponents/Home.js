@@ -54,8 +54,14 @@ class Home extends React.Component {
             transform: `translateX(${this.state.translateValue}px)`,
             transition: 'transform ease-out 0.45s'
           }}>
-          {this.state.images.map((image, i) => (
-            <HomeSlide key={i} image={image} />
+          {this.props.stories.map((story, i) => (
+            <HomeSlide 
+              key={i} 
+              story={story} 
+              url_thumbnail={story.url_thumbnail} 
+              title={story.title}
+              snippet={story.snippet}
+            />
           ))}
         </div>
 
