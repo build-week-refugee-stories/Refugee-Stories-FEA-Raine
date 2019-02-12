@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 import Navigation from './components/Navigation';
-import Home from './components/Home';
+import Home from './components/homeComponents/Home';
 import StoryList from './components/StoryList';
 import SubmitStory from './components/SubmitStory';
 import IndStory from './components/IndStory';
