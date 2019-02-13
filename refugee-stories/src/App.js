@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Home from './components/homeComponents/Home';
 import StoryList from './components/StoryList';
 import SubmitStory from './components/SubmitStory';
+import Login from './components/loginComponents/Login';
 import IndStory from './components/IndStory';
 import './App.css';
 
@@ -50,6 +51,10 @@ class App extends Component {
         <Route 
           exact path="/submit_story" 
           component={SubmitStory}
+        />
+        <Route 
+          exact path="/login" 
+          component={Login}
         />
         <Route 
           path="/stories/:id"

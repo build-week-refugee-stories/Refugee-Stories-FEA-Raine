@@ -13,7 +13,7 @@ const Navigation = () => {
       <NavLink to="/submit_story">
         <h2>Submit Your Story</h2>
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/login">
         <h2>Admin Log-In</h2>
       </NavLink>
     </div>
