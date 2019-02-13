@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import IndRecSub from './IndRecSub';
 
@@ -14,8 +15,8 @@ class RecentSubmits extends React.Component {
   componentDidMount() {
     const token = localStorage.getItem('token');
     const requestOptions = {
-      headers: { 
-        authorization: token 
+      headers: {
+        authorization: token
       }
     }
     axios
@@ -28,46 +29,37 @@ class RecentSubmits extends React.Component {
       .catch(error => console.log(error))
   }
 
-  deleteStory = (event, id) => {
-    event.preventDefault();
-    const token = localStorage.getItem('token');
-    const requestOptions = {
-      headers: { 
-        authorization: token 
-      }
-    }
-    axios
-      .delete(`https://refugeestories.herokuapp.com/api/deletestory/${id}`, requestOptions)
-      .then(response => {
-        this.props.history.push('/recent-stories')
-      })
-      .catch(error => console.log(error))
-  }
-
   updateStory = (event, id) => {
     event.preventDefault();
     const token = localStorage.getItem('token');
     const requestOptions = {
-      headers: { 
-        authorization: token 
+      headers: {
+        authorization: token
       }
     }
     axios
       .put(`https://refugeestories.herokuapp.com/api/updatestory${id}`, requestOptions)
       .then(response => console.log(response))
-      .catch(error => console.log(error));
+      .catch(error => console.log(error))
   }
 
   render() {
     console.log(this.state.recentSubmissions);
     return (
       <div>
-        {this.state.recentSubmissions.map((recSub, i) => {
+        {this.state.recentSubmissions.map((addedStory, id) => {
           return (
-            <IndRecSub
-              recSub={recSub}
-              key={i}
-            />
+            <Link to={`/allstories/${id}`} key={addedStory.id}>
+              <IndRecSub
+                addedStory={addedStory}
+                key={addedStory.id}
+                author={addedStory.author}
+                title={addedStory.title}
+                country={addedStory.country}
+                snippet={addedStory.snippet}
+                body={addedStory.body}
+              />
+            </Link>
           )
         })}
       </div>
