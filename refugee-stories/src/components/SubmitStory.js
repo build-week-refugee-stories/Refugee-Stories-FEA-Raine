@@ -41,26 +41,36 @@ class SubmitStory extends Component {
           type="text"
           name="author"
           placeholder="Author" 
+          value={this.state.author}
+          onChange={this.handleChange}
           />
           <input 
           type="text"
           name="title"
           placeholder="Title" 
+          value={this.state.title}
+          onChange={this.handleChange}
           />
           <input 
           type="text"
           name="country"
           placeholder="Country" 
+          value={this.state.country}
+          onChange={this.handleChange}
           />
           <input 
           type="text"
           name="snippet"
           placeholder="Snippet (optional)" 
+          value={this.state.snippet}
+          onChange={this.handleChange}
           />
           <input 
           type="text"
           name="body"
           placeholder="Tell us your story..." 
+          value={this.state.body}
+          onChange={this.handleChange}
           />
           <button type='submit'> Add Story!</button>
         </form>

@@ -3,7 +3,9 @@
 .App {
   text-align: center;
   background-image: url('https://www.annenbergphotospace.org/wp-content/uploads/2016/02/refugee-1920x1000-hero_0.jpg');
-  height: 100vh;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 /* Navigation styles */
@@ -41,6 +43,7 @@ a {
   height: 500px;
   overflow: hidden;
   white-space: nowrap;
+  border-radius: 1rem;
 }
 
 .slider-wrapper {
@@ -88,3 +91,4 @@ a {
   font-weight: bold;
   color: red;
 }
+

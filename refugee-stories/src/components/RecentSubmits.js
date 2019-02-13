@@ -14,29 +14,60 @@ class RecentSubmits extends React.Component {
   componentDidMount() {
     const token = localStorage.getItem('token');
     const requestOptions = {
-      headers:
-        { authorization: token }
+      headers: { 
+        authorization: token 
+      }
     }
     axios
       .get('https://refugeestories.herokuapp.com/api/allstories', requestOptions)
       .then(response => {
         this.setState({
-          stories: response.data
+          recentSubmissions: response.data
         })
       })
       .catch(error => console.log(error))
   }
 
+  deleteStory = (event, id) => {
+    event.preventDefault();
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: { 
+        authorization: token 
+      }
+    }
+    axios
+      .delete(`https://refugeestories.herokuapp.com/api/deletestory/${id}`, requestOptions)
+      .then(response => {
+        this.props.history.push('/recent-stories')
+      })
+      .catch(error => console.log(error))
+  }
+
+  updateStory = (event, id) => {
+    event.preventDefault();
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: { 
+        authorization: token 
+      }
+    }
+    axios
+      .put(`https://refugeestories.herokuapp.com/api/updatestory${id}`, requestOptions)
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
+  }
+
   render() {
+    console.log(this.state.recentSubmissions);
     return (
       <div>
-      <h2>test</h2>
         {this.state.recentSubmissions.map((recSub, i) => {
-          return(
+          return (
             <IndRecSub
-            recSub={recSub}
-            key={i}
-          />
+              recSub={recSub}
+              key={i}
+            />
           )
         })}
       </div>
