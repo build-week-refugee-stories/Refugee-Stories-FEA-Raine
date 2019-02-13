@@ -10,6 +10,7 @@ import SubmitStory from './components/SubmitStory';
 import Login from './components/loginComponents/Login';
 import IndStory from './components/IndStory';
 import './App.css';
+import RecentSubmits from './components/RecentSubmits';
 
 class App extends Component {
   state = {
@@ -55,6 +56,10 @@ class App extends Component {
         <Route 
           exact path="/login" 
           component={Login}
+        />
+        <Route 
+          exact path="/recent-stories" 
+          component={RecentSubmits}
         />
         <Route 
           path="/stories/:id"

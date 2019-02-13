@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
+import IndRecSub from './IndRecSub';
+
 class RecentSubmits extends React.Component {
   constructor() {
     super();
     this.state = {
-      recentStories: []
+      recentSubmissions: []
     }
   }
 
@@ -28,7 +30,15 @@ class RecentSubmits extends React.Component {
   render() {
     return (
       <div>
-        <h1>test</h1>
+      <h2>test</h2>
+        {this.state.recentSubmissions.map((recSub, i) => {
+          return(
+            <IndRecSub
+            recSub={recSub}
+            key={i}
+          />
+          )
+        })}
       </div>
     )
   }
