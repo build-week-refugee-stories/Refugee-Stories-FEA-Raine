@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HomeSlide from './HomeSlide';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
