@@ -2,15 +2,28 @@
 
 .App {
   text-align: center;
+  background-image: url('https://www.annenbergphotospace.org/wp-content/uploads/2016/02/refugee-1920x1000-hero_0.jpg');
+  height: 100vh;
 }
 
 /* Navigation styles */
 
 .navBar {
   display: flex;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  color: white;
+  padding: 2rem;
+}
+.navLinks {
+  display: flex;
   font-size: 2rem;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
+}
+
+.navLinks a {
+  color: white;
+  margin: 1rem 3rem;
 }
 
 a {
@@ -22,8 +35,9 @@ a {
 
 .slider {
   position: relative;
-  width: 500px;
-  margin: 0 auto;
+  width: 700px;
+  margin-left: 13%;
+  margin-top: 10rem;
   height: 500px;
   overflow: hidden;
   white-space: nowrap;
@@ -42,15 +56,9 @@ a {
 }
 
 .arrow {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f9f9f9;
-  border-radius: 50%;
+  font-size: 3rem;
+  color: rgb(204, 37, 37);
   cursor: pointer;
-  transition: transform ease-in .1s;
 }
 
 .nextArrow {
@@ -67,4 +75,16 @@ a {
   left: 25px;
   z-index: 999;
   color: #fff;
+}
+
+.slideSnippet {
+  color: white;
+  margin-top: 40rem;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.466);
+}
+
+.slideSnippet span {
+  font-weight: bold;
+  color: red;
 }

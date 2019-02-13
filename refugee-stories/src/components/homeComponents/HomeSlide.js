@@ -9,8 +9,7 @@ const HomeSlide = props => {
   }
   return (
     <div className='slide' style={styles}>
-      <h3>{props.title}</h3>
-      <p>{props.snippet}</p>
+      <p className='slideSnippet'><span>{props.title}</span>: "{props.snippet}" -{props.author}</p>
     </div>
   )
 }

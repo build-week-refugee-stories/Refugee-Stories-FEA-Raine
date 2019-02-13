@@ -61,6 +61,7 @@ class Home extends React.Component {
               url_thumbnail={story.url_thumbnail} 
               title={story.title}
               snippet={story.snippet}
+              author={story.author}
             />
           ))}
         </div>
