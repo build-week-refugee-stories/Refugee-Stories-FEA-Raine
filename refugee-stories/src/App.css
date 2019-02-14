@@ -92,3 +92,83 @@ a {
   color: red;
 }
 
+/* Stories list styles */
+
+.storyTitlesList {
+  font-size: 2rem; 
+  width: 60rem;
+  margin-top: 5rem;
+  margin-left: 26rem;
+  padding-bottom: 3rem;
+}
+
+.storyTitlesSec {
+  margin-bottom: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.281);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.storyTitlesTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-decoration: underline rgb(204, 37, 37);
+}
+
+.storyTitlesAuthor {
+  margin-bottom: 1rem;
+}
+
+.storyTitlesSnippet {
+  color: rgb(204, 37, 37);
+  font-size: 1.6rem;
+}
+
+/* Individual story styles */
+
+.indStoryWrapper {
+  width: 90rem;
+  margin-top: 5rem;
+  margin-left: 9rem;
+  padding-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.281);
+  border-radius: 1rem;
+}
+
+.indStoryTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  text-align: right;
+}
+
+.indStoryImg {
+  border-radius: 1rem;
+}
+
+.indStoryTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.indStoryAuthor {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.indStoryCountry {
+  font-size: 2rem;
+  color: rgb(204, 37, 37);
+}
+
+.indStoryBody {
+  font-size: 2rem;
+  padding: 0 3rem;
+  color: white;
+  text-align: left;
+}

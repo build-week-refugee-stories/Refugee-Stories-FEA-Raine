@@ -31,12 +31,18 @@ class IndStory extends Component {
     }
     const { url_thumbnail, title, author, country, body } = this.state.story;
     return (
-      <div>
-        <img src={url_thumbnail} alt="Story-img" />
-        <h2>{title}</h2>
-        <h3>{author}</h3>
-        <h3>{country}</h3>
-        <p>{body}</p>
+      <div className='indStoryWrapper'>
+        <div className='indStoryTop'>
+          <div>
+            <img className='indStoryImg' src={url_thumbnail} alt="Story-img" />
+          </div>
+          <div>
+            <h2 className='indStoryTitle'>{title}</h2>
+            <h3 className='indStoryAuthor'>{author}</h3>
+            <h3 className='indStoryCountry'>{country}</h3>
+          </div>
+        </div>
+        <p className='indStoryBody'>{body}</p>
       </div>
     )
   }

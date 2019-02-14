@@ -17,7 +17,7 @@ class StoryList extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className='storyTitlesList'>
           {this.props.stories.map(story => {
             return (
               <Link to={`/stories/${story.id}`} key={story.id}>
