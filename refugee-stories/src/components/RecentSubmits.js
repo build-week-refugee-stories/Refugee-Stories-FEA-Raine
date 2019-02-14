@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { Route } from 'react-router-dom';
 
-import IndRecSub from './IndRecSub';
+import RecentSubmit from './RecentSubmit';
 
 class RecentSubmits extends React.Component {
   constructor() {
@@ -29,29 +28,18 @@ class RecentSubmits extends React.Component {
       .catch(error => console.log(error))
   }
 
-  updateStory = (event, id) => {
-    event.preventDefault();
-    const token = localStorage.getItem('token');
-    const requestOptions = {
-      headers: {
-        authorization: token
-      }
-    }
-    axios
-      .put(`https://refugeestories.herokuapp.com/api/updatestory${id}`, requestOptions)
-      .then(response => console.log(response))
-      .catch(error => console.log(error))
-  }
-
   render() {
-    console.log(this.state.recentSubmissions);
     return (
       <div>
-        <IndRecSub addedStory={this.state} />
-        <Route
-          exact path="/allstories/:id"
-          component={IndRecSub}
-        />
+        {this.state.recentSubmissions.map((recStory, index) => {
+          return (
+          <RecentSubmit 
+            recStory={recStory}
+            key={index}
+          />
+        )
+        })}
+        
       </div>
     )
   }

@@ -38,7 +38,7 @@ class IndRecSub extends React.Component {
       .catch(error => console.log(error));
   }
 
-  deleteStory = (event) => {
+  deleteStory = (event, id) => {
     event.preventDefault();
     const token = localStorage.getItem('token');
     const requestOptions = {
