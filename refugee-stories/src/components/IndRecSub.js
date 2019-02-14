@@ -49,9 +49,6 @@ class IndRecSub extends React.Component {
     axios
       .delete(`https://refugeestories.herokuapp.com/api/deletestory/${id}`, requestOptions)
       .then(response => {
-        // this.setState({
-        //   addedStory: response.data
-        // })
         this.props.history.push('/recent-stories')
       })
       .catch(error => console.log(error))
