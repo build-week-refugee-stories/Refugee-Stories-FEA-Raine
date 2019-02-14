@@ -172,3 +172,48 @@ a {
   color: white;
   text-align: left;
 }
+
+/* Submit story form styles */
+
+.submitStoryWrapper {
+  width: 90rem;
+  margin-top: 5rem;
+  margin-left: 9rem;
+  padding-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.281);
+  border-radius: 1rem;
+}
+
+.submitStoryTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.submitStoryForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitStoryForm input {
+  width: 40rem;
+  height: 3rem;
+  margin: 1rem auto;
+}
+
+.submitStoryForm button:hover {
+  height: 3rem;
+  width: 9rem;
+  margin: 1rem auto;
+  background-color: grey;
+  border: 1px solid rgb(204, 37, 37);
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+}
+
+.submitStoryForm button:hover {
+  background-color: grey;
+  border: 1px solid rgb(204, 37, 37);
+  color: rgb(204, 37, 37);
+}

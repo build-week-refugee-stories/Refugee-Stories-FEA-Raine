@@ -34,9 +34,9 @@ class SubmitStory extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Add Your Story</h2>
-        <form onSubmit={this.addNewStory}>
+      <div className='submitStoryWrapper'>
+        <h2 className='submitStoryTitle'>Tell Us Your Story</h2>
+        <form className='submitStoryForm' onSubmit={this.addNewStory}>
           <input 
           type="text"
           name="author"
