@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import IndRecSub from './IndRecSub';
 
@@ -47,21 +47,11 @@ class RecentSubmits extends React.Component {
     console.log(this.state.recentSubmissions);
     return (
       <div>
-        {this.state.recentSubmissions.map((addedStory, id) => {
-          return (
-            <Link to={`/allstories/${id}`} key={addedStory.id}>
-              <IndRecSub
-                addedStory={addedStory}
-                key={addedStory.id}
-                author={addedStory.author}
-                title={addedStory.title}
-                country={addedStory.country}
-                snippet={addedStory.snippet}
-                body={addedStory.body}
-              />
-            </Link>
-          )
-        })}
+        <IndRecSub addedStory={this.state} />
+        <Route
+          exact path="/allstories/:id"
+          component={IndRecSub}
+        />
       </div>
     )
   }

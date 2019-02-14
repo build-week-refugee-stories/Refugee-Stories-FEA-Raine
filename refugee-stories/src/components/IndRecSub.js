@@ -1,18 +1,35 @@
 import React from 'react';
 import axios from 'axios';
+import IndIndRecSub from './IndIndRecSub';
 
 class IndRecSub extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      addedStory: []
+      addedStory: {
+        author: '',
+        title: '',
+        country: '',
+        snippet: '',
+        body: ''
+      }
     }
   }
 
   componentDidMount() {
     const id = this.props.match.params.id;
+    this.fetchStory(id)
+  }
+
+  fetchStory = id => {
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: {
+        authorization: token
+      }
+    }
     axios
-      .get(`https://refugeestories.herokuapp.com/api/allstories/${id}`)
+      .get(`https://refugeestories.herokuapp.com/api/allstories/${id}`, requestOptions)
       .then(response => {
         this.setState({
           addedStory: response.data
@@ -21,16 +38,20 @@ class IndRecSub extends React.Component {
       .catch(error => console.log(error));
   }
 
-  deleteStory = () => {
-    const id = this.props.match.params.id;
+  deleteStory = (event) => {
+    event.preventDefault();
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: {
+        authorization: token
+      }
+    }
     axios
-      .delete(`https://refugeestories.herokuapp.com/api/deletestory/${id}`)
+      .delete(`https://refugeestories.herokuapp.com/api/deletestory/${id}`, requestOptions)
       .then(response => {
-        this.setState({
-          addedStory: response.data
-        });
-      })
-      .then(() => {
+        // this.setState({
+        //   addedStory: response.data
+        // })
         this.props.history.push('/recent-stories')
       })
       .catch(error => console.log(error))
@@ -39,15 +60,11 @@ class IndRecSub extends React.Component {
   render() {
     return (
       <div>
-        <h3>{this.state.addedStory.author}</h3>
-        <h3>{this.state.addedStory.title}</h3>
-        <h3>{this.state.addedStory.country}</h3>
-        <p>{this.state.addedStory.snippet}</p>
-        <p>{this.state.addedStory.body}</p>
-        <div>
-          <button>Approve Story</button>
-          <button onClick={this.deleteNote}>Reject Story</button>
-        </div>
+        <IndIndRecSub
+          story={this.state.addedStory}
+          deleteStory={this.deleteStory}
+          id={this.state.addedStory.id}
+        />
       </div>
     )
   }

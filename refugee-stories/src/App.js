@@ -11,7 +11,6 @@ import Login from './components/loginComponents/Login';
 import IndStory from './components/IndStory';
 import './App.css';
 import RecentSubmits from './components/RecentSubmits';
-import IndRecSub from './components/IndRecSub';
 
 class App extends Component {
   state = {
@@ -66,12 +65,7 @@ class App extends Component {
           path="/stories/:id"
           component={IndStory}
         />
-        <Route 
-          exact path="/allstories/:id"
-          render={props => (
-            <IndRecSub {...props} />
-          )}
-        />
+        
       </div>
     );
   }
