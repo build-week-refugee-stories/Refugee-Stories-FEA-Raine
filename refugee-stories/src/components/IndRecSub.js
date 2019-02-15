@@ -12,6 +12,16 @@ class IndRecSub extends React.Component {
         country: '',
         snippet: '',
         body: ''
+      },
+      prepopulatedStory: {
+        author: "Anonomous",
+        title: "Bitcoin",
+        snippet: "I was able to...",
+        approved: false,
+        body: "...A friends of mine, ...",
+        country: "Afghdfanistan",
+        url_picture: 'www.hello.com/fred.gif',
+        url_thumbnail: 'www.hello.com/fred_small.gif'
       }
     }
   }
@@ -54,12 +64,48 @@ class IndRecSub extends React.Component {
       .catch(error => console.log(error))
   }
 
+  updateStory = (event, id) => {
+    event.preventDefault();
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: { autorization: token }
+    };
+    const prepopulatedStory = {
+      ...this.state.addIndividualRecentStory,
+      approved: true,
+      title: this.state.addedStory.title,
+      author: this.state.addedStory.author,
+      country: this.state.addedStory.country,
+      body: this.state.addedStory.body,
+      snippet: this.state.addedStory.snippet,
+      url_picture: this.state.addedStory.url_picture,
+      url_thumbnail: this.state.addedStory.url_thumbnail
+    };
+    axios
+      .put(`https://refugeestories.herokuapp.com/api/updatestory/${id}`, prepopulatedStory, requestOptions)
+      .then(response => this.setState({
+        stories: response.data
+      }))
+      .then(() => {
+        this.props.history.push('/stories');
+      })
+      .catch(error => console.log(error));
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
   render() {
     return (
       <div>
         <IndIndRecSub
           story={this.state.addedStory}
           deleteStory={this.deleteStory}
+          updateStory={this.updateStory}
+          handleChange={this.handleChange}
           id={this.state.addedStory.id}
         />
       </div>
