@@ -1,0 +1,272 @@
+/* General app styles */
+
+.App {
+  text-align: center;
+  background-image: url('https://www.annenbergphotospace.org/wp-content/uploads/2016/02/refugee-1920x1000-hero_0.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Navigation styles */
+
+.navBar {
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  color: white;
+  padding: 2rem;
+}
+.navLinks {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-evenly;
+}
+
+.navLinks a {
+  color: white;
+  margin: 1rem 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Home styles */
+
+.homeTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+  padding: 2rem;
+  margin-left: 18rem;
+  margin-top: 5rem;
+}
+
+.slider {
+  position: relative;
+  width: 700px;
+  margin-left: 21%;
+  margin-top: 5rem;
+  height: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 1rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  font-size: 4rem;
+  color: rgb(204, 37, 37);
+  cursor: pointer;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  z-index: 999;
+  color: #fff;
+}
+
+.backArrow {
+  position: absolute;
+  top: 55%;
+  left: 7%;
+  z-index: 999;
+  color: #fff;
+}
+
+.slideSnippet {
+  color: white;
+  margin-top: 40rem;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.466);
+}
+
+.slideSnippet span {
+  font-weight: bold;
+  color: rgb(204, 37, 37);
+}
+
+.homeP {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  margin-left: 15rem;
+}
+
+.homeP a {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  text-decoration: underline rgb(204, 37, 37);
+}
+
+/* Stories list styles */
+
+.storyTitlesList {
+  font-size: 2rem; 
+  width: 60rem;
+  margin-top: 5rem;
+  margin-left: 26rem;
+  padding-bottom: 3rem;
+}
+
+.storyTitlesSec {
+  margin-bottom: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.281);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.storyTitlesTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-decoration: underline rgb(204, 37, 37);
+}
+
+.storyTitlesAuthor {
+  margin-bottom: 1rem;
+}
+
+.storyTitlesSnippet {
+  color: rgb(204, 37, 37);
+  font-size: 1.6rem;
+}
+
+/* IndividualStory/login styles */
+
+.div1 {
+  width: 90rem;
+}
+
+.indStoryWrapper {
+  width: 90rem;
+  margin-top: 5rem;
+  margin-left: 9rem;
+  padding-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.281);
+  border-radius: 1rem;
+}
+
+.indStoryTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  text-align: right;
+}
+
+.indStoryImg {
+  border-radius: 1rem;
+}
+
+.indStoryTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.indStoryAuthor {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.indStoryCountry {
+  font-size: 2rem;
+  color: rgb(204, 37, 37);
+}
+
+.indStoryBody {
+  font-size: 2rem;
+  padding: 0 3rem;
+  color: white;
+  text-align: left;
+}
+
+/* Submit story form styles */
+
+.submitStoryWrapper {
+  width: 90rem;
+  margin-top: 5rem;
+  margin-left: 9rem;
+  padding-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.281);
+  border-radius: 1rem;
+}
+
+.submitStoryTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.submitStoryForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitStoryForm input {
+  width: 40rem;
+  height: 3rem;
+  margin: 1rem auto;
+}
+
+.submitStoryForm button {
+  height: 3rem;
+  width: 9rem;
+  margin: 1rem auto;
+  background-color: grey;
+  border: 1px solid rgb(204, 37, 37);
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+}
+
+.submitStoryForm button:hover {
+  background-color: rgb(204, 37, 37);
+  border: 1px solid grey;
+  color: grey;
+}
+
+/* Login page styles */
+
+
+.recentStoryCard  {
+  margin: 2rem 8rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.281);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.RSCTop {
+  color: white;
+  font-size: 3rem;
+}
+
+.RSCBottom {
+  color: white;
+  font-size: 2rem;
+}
