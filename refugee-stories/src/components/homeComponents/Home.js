@@ -48,6 +48,10 @@ class Home extends React.Component {
 
   render() {
     return (
+      <div>
+        <div>
+
+       
       <div className='slider'>
         <div className="slider-wrapper"
           style={{
@@ -65,6 +69,8 @@ class Home extends React.Component {
             />
           ))}
         </div>
+        </div>
+      </div>
 
         <LeftArrow prevSlide={this.prevSlide} />
         <RightArrow nextSlide={this.nextSlide} />

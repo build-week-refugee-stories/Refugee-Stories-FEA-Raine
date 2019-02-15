@@ -71,7 +71,7 @@ class IndRecSub extends React.Component {
       headers: { autorization: token }
     };
     const prepopulatedStory = {
-      ...this.state.addIndividualRecentStory,
+      ...this.state.prepopulatedStory,
       approved: true,
       title: this.state.addedStory.title,
       author: this.state.addedStory.author,
@@ -79,7 +79,8 @@ class IndRecSub extends React.Component {
       body: this.state.addedStory.body,
       snippet: this.state.addedStory.snippet,
       url_picture: this.state.addedStory.url_picture,
-      url_thumbnail: this.state.addedStory.url_thumbnail
+      url_thumbnail: this.state.addedStory.url_thumbnail,
+      id: this.state.addedStory.id
     };
     axios
       .put(`https://refugeestories.herokuapp.com/api/updatestory/${id}`, prepopulatedStory, requestOptions)

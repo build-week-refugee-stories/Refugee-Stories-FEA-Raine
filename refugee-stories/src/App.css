@@ -89,7 +89,7 @@ a {
 
 .slideSnippet span {
   font-weight: bold;
-  color: red;
+  color: rgb(204, 37, 37);
 }
 
 /* Stories list styles */
@@ -126,7 +126,7 @@ a {
   font-size: 1.6rem;
 }
 
-/* Individual story styles */
+/* IndividualStory/login styles */
 
 .indStoryWrapper {
   width: 90rem;
@@ -202,7 +202,7 @@ a {
   margin: 1rem auto;
 }
 
-.submitStoryForm button:hover {
+.submitStoryForm button {
   height: 3rem;
   width: 9rem;
   margin: 1rem auto;
@@ -213,7 +213,10 @@ a {
 }
 
 .submitStoryForm button:hover {
-  background-color: grey;
-  border: 1px solid rgb(204, 37, 37);
-  color: rgb(204, 37, 37);
+  background-color: rgb(204, 37, 37);
+  border: 1px solid grey;
+  color: grey;
 }
+
+/* Login page styles */
+

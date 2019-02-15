@@ -31,8 +31,9 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.setUser}>
+      <div className='submitStoryWrapper'>
+        <h2 className='submitStoryTitle'>Admin Log-In</h2>
+        <form className='submitStoryForm' onSubmit={this.setUser}>
           <input 
             placeholder='Username'
             type='text'
