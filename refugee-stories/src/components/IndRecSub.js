@@ -70,7 +70,7 @@ class IndRecSub extends React.Component {
     const requestOptions = {
       headers: { autorization: token }
     };
-    const prepopulatedStory = {
+    const addedStory = {
       ...this.state.prepopulatedStory,
       approved: true,
       title: this.state.addedStory.title,
@@ -83,9 +83,9 @@ class IndRecSub extends React.Component {
       id: this.state.addedStory.id
     };
     axios
-      .put(`https://refugeestories.herokuapp.com/api/updatestory/${id}`, prepopulatedStory, requestOptions)
+      .put(`https://refugeestories.herokuapp.com/api/updatestory/${id}`, addedStory, requestOptions)
       .then(response => this.setState({
-        stories: response.data
+        pPaddedStory: response.data
       }))
       .then(() => {
         this.props.history.push('/stories');

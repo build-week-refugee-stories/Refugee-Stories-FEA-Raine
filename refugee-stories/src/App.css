@@ -35,11 +35,20 @@ a {
 
 /* Home styles */
 
+.homeTitle {
+  font-size: 5rem;
+  color: rgb(204, 37, 37);
+  font-weight: bold;
+  padding: 2rem;
+  margin-left: 18rem;
+  margin-top: 5rem;
+}
+
 .slider {
   position: relative;
   width: 700px;
-  margin-left: 13%;
-  margin-top: 10rem;
+  margin-left: 21%;
+  margin-top: 5rem;
   height: 500px;
   overflow: hidden;
   white-space: nowrap;
@@ -59,7 +68,7 @@ a {
 }
 
 .arrow {
-  font-size: 3rem;
+  font-size: 4rem;
   color: rgb(204, 37, 37);
   cursor: pointer;
 }
@@ -67,15 +76,15 @@ a {
 .nextArrow {
   position: absolute;
   top: 50%;
-  right: 25px;
+  left: 57%;
   z-index: 999;
   color: #fff;
 }
 
 .backArrow {
   position: absolute;
-  top: 50%;
-  left: 25px;
+  top: 55%;
+  left: 7%;
   z-index: 999;
   color: #fff;
 }
@@ -90,6 +99,20 @@ a {
 .slideSnippet span {
   font-weight: bold;
   color: rgb(204, 37, 37);
+}
+
+.homeP {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  margin-left: 15rem;
+}
+
+.homeP a {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+  text-decoration: underline rgb(204, 37, 37);
 }
 
 /* Stories list styles */
@@ -127,6 +150,10 @@ a {
 }
 
 /* IndividualStory/login styles */
+
+.div1 {
+  width: 90rem;
+}
 
 .indStoryWrapper {
   width: 90rem;
@@ -220,3 +247,26 @@ a {
 
 /* Login page styles */
 
+
+.recentStoryCard  {
+  margin: 2rem 8rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.281);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.RSCTop {
+  color: white;
+  font-size: 3rem;
+}
+
+.RSCBottom {
+  color: white;
+  font-size: 2rem;
+}

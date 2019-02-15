@@ -11,11 +11,11 @@ class RecentSubmit extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='recentStoryCard'>
         <Link to={`/recent-stories/${this.props.recStory.id}`} key={this.state.recStory.id}>
-          <h3>{this.state.recStory.author}</h3>
-          <h3>{this.state.recStory.title}</h3>
-          <p>{this.state.recStory.body}</p>
+          <h3 className='RSCTop'>{this.state.recStory.author}</h3>
+          <h3 className='RSCTop'>{this.state.recStory.title}</h3>
+          <p className='RSCBottom'>{this.state.recStory.body}</p>
         </Link>
       </div>
     )

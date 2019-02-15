@@ -39,7 +39,9 @@ class RecentSubmits extends React.Component {
           />
         )
         })}
-        
+        <div className='padding'>
+
+        </div>
       </div>
     )
   }
